@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Zine</title>
+  <style>
+    :root {
+      --bg-color: #f9f9f9;
+      --text-color: #222;
+      --accent-color: #8b0000;
+      --font-header: 'Georgia', serif;
+      --font-body: 'Helvetica Neue', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-body);
+      background: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header, footer {
+      background-color: var(--accent-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-header);
+    }
+
+    .zine-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    .zine-page {
+      padding: 2rem 1rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .interactive-button {
+      background-color: var(--accent-color);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .popup-box {
+      display: none;
+      background-color: #fff8dc;
+      border: 1px solid #999;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      .zine-container {
+        padding: 1rem 0.5rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>A Fool's Guide to Drollery</h1>
+    <p>Interactive Dramaturgy Zine</p>
+  </header>
+
+  <main class="zine-container">
+    <section class="zine-page">
+      <h2>Welcome</h2>
+      <p>This zine explores the theatrical form of drollery that thrived under Puritan rule in 17th-century England. Navigate each section to discover more.</p>
+    </section>
+
+    <section class="zine-page">
+      <h2>What is a Droll?</h2>
+      <p>Drolls were short, comedic sketches derived from longer plays. Click below to learn more.</p>
+      <button class="interactive-button" onclick="togglePopup('popup1')">Tell Me More</button>
+      <div id="popup1" class="popup-box">
+        <p>Often staged in secret, drolls were performed in inns and private homes when public theatre was banned.</p>
+      </div>
+    </section>
+
+    <section class="zine-page">
+      <h2>Glossary</h2>
+      <ul>
+        <li><strong>Droll:</strong> A short, humorous performance piece.</li>
+        <li><strong>Interregnum:</strong> The period when England was a republic (1649–1660).</li>
+        <li><strong>Puritan:</strong> A member of a strict religious group who opposed theatre.</li>
+      </ul>
+    </section>
+
+    <section class="zine-page">
+      <h2>Resources</h2>
+      <p>External links to continue exploring:</p>
+      <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Droll" target="_blank">Wikipedia: Droll</a></li>
+        <li><a href="https://owlcation.com/humanities/When-Puritans-Closed-Theatres" target="_blank">Owlcation: When Puritans Closed Theatres</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Alyssa Barrack | Interactive Zine Project</p>
+  </footer>
+
+  <script>
+    function togglePopup(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
