@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Interactive Flipbook Zine</title>
+  <title>A Fool's Guide to Drollery</title>
   <style>
     :root {
       --bg-color: #fdfaf6;
@@ -18,16 +18,35 @@
       font-family: var(--font-body);
       background-color: var(--bg-color);
       color: var(--text-color);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-family: var(--font-header);
+    }
+
+    .flipbook-container {
+      flex-grow: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
       overflow: hidden;
     }
 
     .flipbook {
       width: 90vw;
-      height: 90vh;
+      height: 85vh;
       background: white;
       box-shadow: 0 0 20px rgba(0,0,0,0.2);
       position: relative;
@@ -45,6 +64,7 @@
       transform-origin: left center;
       transition: transform 0.6s ease-in-out;
       backface-visibility: hidden;
+      overflow-y: auto;
     }
 
     .page h2 {
@@ -74,7 +94,7 @@
 
     @media screen and (max-width: 600px) {
       .flipbook {
-        height: 95vh;
+        height: 90vh;
         width: 95vw;
       }
 
@@ -85,37 +105,44 @@
   </style>
 </head>
 <body>
-  <div class="flipbook">
-    <div class="page" id="page0" style="z-index: 5;">
-      <h2>Welcome</h2>
-      <p>This zine explores the theatrical form of drollery that thrived under Puritan rule in 17th-century England. Click to flip through each section and discover more.</p>
-    </div>
+  <header>
+    <h1>A Fool's Guide to Drollery</h1>
+    <p>An Interactive Dramaturgy Flipbook Zine</p>
+  </header>
 
-    <div class="page" id="page1" style="z-index: 4;">
-      <h2>What is a Droll?</h2>
-      <p>Drolls were short, comedic sketches often adapted from longer stage plays and performed in secret. They kept English theatre alive during the Interregnum.</p>
-    </div>
+  <div class="flipbook-container">
+    <div class="flipbook">
+      <div class="page" id="page0" style="z-index: 5;">
+        <h2>Welcome</h2>
+        <p>This zine explores the theatrical form of drollery that thrived under Puritan rule in 17th-century England. Click to flip through each section and discover more.</p>
+      </div>
 
-    <div class="page" id="page2" style="z-index: 3;">
-      <h2>Glossary</h2>
-      <ul>
-        <li><strong>Droll:</strong> A short, humorous performance piece.</li>
-        <li><strong>Interregnum:</strong> The period when England was a republic (1649–1660).</li>
-        <li><strong>Puritan:</strong> A member of a strict religious group who opposed theatre.</li>
-      </ul>
-    </div>
+      <div class="page" id="page1" style="z-index: 4;">
+        <h2>What is a Droll?</h2>
+        <p>Drolls were short, comedic sketches often adapted from longer stage plays and performed in secret. They kept English theatre alive during the Interregnum.</p>
+      </div>
 
-    <div class="page" id="page3" style="z-index: 2;">
-      <h2>Resources</h2>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Droll" target="_blank">Wikipedia: Droll</a></li>
-        <li><a href="https://owlcation.com/humanities/When-Puritans-Closed-Theatres" target="_blank">Owlcation: When Puritans Closed Theatres</a></li>
-      </ul>
-    </div>
+      <div class="page" id="page2" style="z-index: 3;">
+        <h2>Glossary</h2>
+        <ul>
+          <li><strong>Droll:</strong> A short, humorous performance piece.</li>
+          <li><strong>Interregnum:</strong> The period when England was a republic (1649–1660).</li>
+          <li><strong>Puritan:</strong> A member of a strict religious group who opposed theatre.</li>
+        </ul>
+      </div>
 
-    <div class="controls">
-      <button class="flip-button" onclick="flipBack()">&larr; Back</button>
-      <button class="flip-button" onclick="flipForward()">Next &rarr;</button>
+      <div class="page" id="page3" style="z-index: 2;">
+        <h2>Resources</h2>
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Droll" target="_blank">Wikipedia: Droll</a></li>
+          <li><a href="https://owlcation.com/humanities/When-Puritans-Closed-Theatres" target="_blank">Owlcation: When Puritans Closed Theatres</a></li>
+        </ul>
+      </div>
+
+      <div class="controls">
+        <button class="flip-button" onclick="flipBack()">&larr; Back</button>
+        <button class="flip-button" onclick="flipForward()">Next &rarr;</button>
+      </div>
     </div>
   </div>
 
