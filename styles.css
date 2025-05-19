@@ -3,21 +3,21 @@
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background-color: #1a1a1a;
-  color: #f0f9e8;
+  background-color: #f5f0e6;
+  color: #2c1b10;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 h2 {
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  color: #a8ff60;
+  color: #5e3023;
   margin-bottom: 0.5em;
 }
 
 h3 {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: #ff85c1;
+  color: #fff8e1;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
 }
