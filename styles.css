@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Georgia', 'Garamond', serif;
   background-color: #f5f0e6;
-  color: #2c1b10;
+  color: #white;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
