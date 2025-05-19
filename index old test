@@ -1,109 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Fool's Guide to Drollery</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background-color: #fdfaf6;
-      color: #1a1a1a;
-    }
-
-    header {
-      background-color: #8b0000;
-      color: white;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #333;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: white;
-      padding: 0.75rem 1rem;
-      text-decoration: none;
-      display: block;
-    }
-
-    nav a:hover {
-      background-color: #555;
-    }
-
-    .flipbook {
-      display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      height: calc(100vh - 140px);
-    }
-
-    .page {
-      flex: none;
-      scroll-snap-align: start;
-      width: 100vw;
-      height: 100%;
-      padding: 2rem;
-      box-sizing: border-box;
-      background: white;
-      border-right: 1px solid #ccc;
-      overflow-y: auto;
-    }
-
-    .page h2 {
-      color: #8b0000;
-      font-family: Georgia, serif;
-    }
-
-    @media (max-width: 600px) {
-      .page {
-        padding: 1rem;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Drolls Dramaturgical Context Packet</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>A Fool's Guide to Drollery</h1>
-    <p>An Interactive Flipbook Zine</p>
-  </header>
-  <nav>
-    <a href="#welcome">Welcome</a>
-    <a href="#what">What is a Droll?</a>
-    <a href="#glossary">Glossary</a>
-    <a href="#resources">Resources</a>
+  <nav id="timeline-nav">
+    <ul>
+      <li><a href="#section1">Dramaturg's Note</a></li>
+      <li><a href="#section2">Table of Contents</a></li>
+      <li><a href="#section3">About the Playwright</a></li>
+      <li><a href="#section4">Introduction and Key Figures of Drolling</a></li>
+      <li><a href="#section5">Historical Context: Puritan Rule and Artistic Suppression</a></li>
+      <li><a href="#section6">A Map of the Play</a></li>
+      <li><a href="#section7">The Music of The Drolls</a></li>
+      <li><a href="#section8">Shakespeare's Plays in The Drolls</a></li>
+      <li><a href="#section9">Glossary</a></li>
+      <li><a href="#section10">Key Themes and Guiding Questions</a></li>
+      <li><a href="#section11">Resources and Further Exploration</a></li>
+      <li><a href="#section12">Packet Bibliography</a></li>
+      <li><a href="#section13">2021 Vis</a></li>
+      <li><a href="#section14">Conclusion</a></li>
+      <li><a href="#section15">Bibliography</a></li>
+    </ul>
   </nav>
-  <div class="flipbook">
-    <section class="page" id="welcome">
-      <h2>Welcome</h2>
-      <p>This zine explores the theatrical form of drollery that thrived under Puritan rule in 17th-century England. Swipe or scroll to flip through each section and discover more.</p>
+
+  <main class="scroll-container">
+    <section id="section1">
+      <h2>Introduction</h2>
+      <h1></h1>
+      <p></p>
     </section>
-    <section class="page" id="what">
-      <h2>What is a Droll?</h2>
-      <p>Drolls were short, comedic sketches often adapted from longer stage plays and performed in secret. They kept English theatre alive during the Interregnum.</p>
+
+    <section id="section2">
     </section>
-    <section class="page" id="glossary">
-      <h2>Glossary</h2>
-      <ul>
-        <li><strong>Droll:</strong> A short, humorous performance piece.</li>
-        <li><strong>Interregnum:</strong> The period when England was a republic (1649–1660).</li>
-        <li><strong>Puritan:</strong> A member of a strict religious group who opposed theatre.</li>
-      </ul>
-    </section>
-    <section class="page" id="resources">
-      <h2>Resources</h2>
-      <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Droll" target="_blank">Wikipedia: Droll</a></li>
-        <li><a href="https://owlcation.com/humanities/When-Puritans-Closed-Theatres" target="_blank">Owlcation: When Puritans Closed Theatres</a></li>
-      </ul>
-    </section>
-  </div>
+
+  </main>
+  <script>
+  const container = document.querySelector('.scroll-container');
+
+  window.addEventListener('keydown', function (e) {
+    const sectionWidth = container.offsetWidth;
+    if (e.key === 'ArrowRight') {
+      container.scrollBy({ left: sectionWidth, behavior: 'smooth' });
+    } else if (e.key === 'ArrowLeft') {
+      container.scrollBy({ left: -sectionWidth, behavior: 'smooth' });
+    }
+  });
+</script>
 </body>
 </html>
