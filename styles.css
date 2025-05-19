@@ -14,8 +14,8 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  color: #fff8e1;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  color: #b38274;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
 }
@@ -164,7 +164,7 @@ section {
   height: 100vh;
   padding: 20px;
   scroll-snap-align: start;
-  background: #5e3023;
+  background: #f5f0e6;
   border-right: 2px solid #333;
   overflow-y: auto;
   box-sizing: border-box;
