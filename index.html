@@ -108,7 +108,113 @@
 
     <section id="section9">
       <h2>Glossary</h2>
-      <p>still deciding about a twine or just popping it here with formatting.</p>
+      <input type="text" id="search-bar" placeholder="Search glossary..." />
+
+      <div id="glossary">
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+
+           <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+               
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+                
+        <div class="glossary-entry">
+          <div class="term" tabindex="0">
+            <span class="toggle-icon">+</span>
+            Word
+          </div>
+          <div class="definition"> this is the definition of word </div>
+        </div>
+      </div>
     </section>
 
     <section id="section10">
@@ -184,6 +290,32 @@
     } else if (e.key === 'ArrowLeft') {
       container.scrollBy({ left: -sectionWidth, behavior: 'smooth' });
     }
+  });
+
+  // Expand/collapse definitions
+  document.querySelectorAll('.term').forEach(term => {
+    term.addEventListener('click', () => {
+      const definition = term.nextElementSibling;
+      const icon = term.querySelector('.toggle-icon');
+      const isOpen = definition.style.display === 'block';
+      definition.style.display = isOpen ? 'none' : 'block';
+      icon.textContent = isOpen ? '+' : '–';
+    });
+
+    term.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        term.click();
+      }
+    });
+  });
+
+  // Search filter
+  document.getElementById('search-bar').addEventListener('input', function () {
+    const query = this.value.toLowerCase();
+    document.querySelectorAll('.glossary-entry').forEach(entry => {
+      const termText = entry.querySelector('.term').textContent.toLowerCase();
+      entry.style.display = termText.includes(query) ? 'block' : 'none';
+    });
   });
 </script>
 </body>
