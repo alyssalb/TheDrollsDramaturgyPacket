@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Drolls Dramaturgical Context Packet</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header>
+    <h1>The Drolls: A Dramaturgical Context Packet</h1>
+      <nav id="timeline-nav">
+        <ul>
+          <li><a href="#section1">Dramaturg's Note</a></li>
+          <li><a href="#section2">Table of Contents</a></li>
+          <li><a href="#section3">About the Playwright</a></li>
+          <li><a href="#section4">Introduction to Drolls</a></li>
+          <li><a href="#section5">Historical Context: Puritan Rule and Artistic Suppression</a></li>
+          <li><a href="#section6">A Map of the Play</a></li>
+          <li><a href="#section7">The Music of The Drolls</a></li>
+          <li><a href="#section8">Shakespeare's Plays in The Drolls</a></li>
+          <li><a href="#section9">Glossary</a></li>
+          <li><a href="#section10">Key Themes and Guiding Questions</a></li>
+          <li><a href="#section11">Packet Bibliography</a></li>
+        </ul>
+      </nav>
+
+    
