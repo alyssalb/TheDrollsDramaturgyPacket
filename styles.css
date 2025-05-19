@@ -11,7 +11,7 @@ body {
 
 h2 {
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  color: #5e3023;
+  color: #b38274;
   margin-bottom: 0.5em;
 }
 
@@ -80,7 +80,7 @@ section li {
 
 #timeline-nav a {
   text-decoration: none;
-  color: #5e3023;
+  color: #b38274;
   font-weight: 600;
   font-size: 0.9rem;
   padding: 4px 6px;
@@ -103,7 +103,7 @@ section li {
 
 #timeline-nav a:hover {
   color: #2e4f2e;
-  text-shadow: 0 0 4px #fff8e1;
+  text-shadow: 0 0 4px #b38274;
 }
 
 #timeline-nav a:hover::after {
